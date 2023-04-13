@@ -337,6 +337,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 TextButton(
+                  autofocus: false,
                     onPressed: () {
                       final Stream<QuerySnapshot> historyStream = FirebaseFirestore.instance
       .collection("history")

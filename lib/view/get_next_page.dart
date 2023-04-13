@@ -26,9 +26,10 @@ class GetNextPage extends StatelessWidget {
         leading: Center(
             child: InkWell(
                 onTap: () {
-                   Navigator.pushNamedAndRemoveUntil(
-                    context, "getStart", (route) => false);
-                }, child: const Icon(Icons.arrow_back))),
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, "getStart", (route) => false);
+                },
+                child: const Icon(Icons.arrow_back))),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -78,7 +79,9 @@ class GetNextPage extends StatelessWidget {
                     height: size.height * 0.05,
                   ),
                   FloatingActionButton.extended(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, "login");
+                      },
                       elevation: 0,
                       label: const Text(
                         "Next",
@@ -102,7 +105,6 @@ class GetNextPage extends StatelessWidget {
                       style: TextStyle(color: Color(0xff7B61FF)))),
             ],
           ),
-          
         ],
       ),
     );
