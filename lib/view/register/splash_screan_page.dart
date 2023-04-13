@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:sporting/view/home_page.dart';
-import 'package:sporting/view/register/login_page.dart';
+
 
 class SplashScrenn extends StatefulWidget {
   const SplashScrenn({super.key});
@@ -11,6 +10,7 @@ class SplashScrenn extends StatefulWidget {
 }
 
 class _SplashScrennState extends State<SplashScrenn> {
+  @override
   void initState() {
     Future.delayed(const Duration(seconds: 3)).then((value) => {chekUser()});
     super.initState();
@@ -26,7 +26,7 @@ class _SplashScrennState extends State<SplashScrenn> {
       if (user != null) {
         Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
       } else {
-        Navigator.pushNamedAndRemoveUntil(context, 'login', (route) => false);
+        Navigator.pushNamedAndRemoveUntil(context, 'getStart', (route) => false);
       }
     });
   }
