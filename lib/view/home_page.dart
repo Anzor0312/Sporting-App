@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
 
                             if (data.isEmpty) {
                               return const Center(
-                                child: Text("HALI MAHSULOTLAR QO'SHILMAGAN"),
+                                child: Text("Malumot Topilmadi"),
                               );
                             } else {
                               return Row(
@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
                                     ],
                                   ),
                                   SizedBox(
-                                    width: size.width * 0.3,
+                                    width: size.width * 0.33,
                                   ),
                                   const Image(
                                       image: AssetImage("assets/direct.png")),
@@ -125,7 +125,7 @@ class HomePage extends StatelessWidget {
 
                       if (data.isEmpty) {
                         return const Center(
-                          child: Text("HALI MAHSULOTLAR QO'SHILMAGAN"),
+                          child: Text("Ma'lumot Topilmadi"),
                         );
                       } else {
                         return Column(
@@ -153,7 +153,7 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 20, color: Color(0xffFFC932))),
                         SizedBox(
-                          width: size.width * 0.008,
+                          width: size.width * 0.018,
                         ),
                         const Image(image: AssetImage("assets/badge.png")),
                       ],
